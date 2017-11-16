@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Author: Ben Abroms
+DESC: Project W3Schools: Loader - 25 pts
+DATE: 11-16-17
+VERSION: 1.0
+BROWSERS SUPPORTED: Chrome
+-->
+<html>
+  <head>
+    <title>Ben Abroms's Loader Tutorial</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <div id="title">
+    <h1>Welcome to the Loader Tutorial</h1>
+    <h4>By Ben Abroms</h4>
+    </div>
+    <div id="intro">
+      <h3>In this tutorial, we will learn how to make the spinning loading wheel as seen on smartphone apps and websites.</h3>
+      <div class="completeLoader"></div>
+      <h3>The loader above is the one we will be creating for this tutorial.</h3>
+      </div>
+    <div id="tutorial">
+      <p>First, we will need to make a div object. Let's name it loader.</p>
+      <div id="displayCode">
+        <code>&ltdiv class="loader"&gt&lt/div&gt</code>
+      </div>
+      <p>We don't need anything content or text because loaders are made completely out of CSS code.</p>
+      <div id="line"></div>
+      <p>Next, we'll need to make a style in CSS for the design of the loader and the animation that will make it spin.</p>
+      <div id="displayCode">
+        <code>.loader {<br>
+  border: 16px solid #f3f3f3;<br>
+  border-radius: 50%;<br>
+  border-top: 16px solid #3498db;<br>
+  width: 120px;<br>
+  height: 120px;<br>
+    }
+  </code>
+      </div>
+      <div class="loader"></div>
+      <p>We will also need to add two important animation properties to the loader code in order for it to run.</p>
+      <div id="displayCode">
+        <code>-webkit-animation: spin 2s linear infinite;<br>
+  animation: spin 2s linear infinite;</code>
+      </div>
+      <p>This code allows the loader to define the movements of the animation.</p>
+      <div id="line"></div>
+      <p>Now we need to create two animation CSS codes that correspond to the code in the loader.</p>
+      <div id="displayCode">
+        <code>@-webkit-keyframes spin {<br>
+  0% { -webkit-transform: rotate(0deg); }<br>
+  100% { -webkit-transform: rotate(360deg); }<br>
+}<br>
+@keyframes spin {<br>
+  0% { transform: rotate(0deg); }<br>
+  100% { transform: rotate(360deg); }<br>
+}</code>
+      </div>
+      <p>These two CSS properties are linked to the ones we made in the loader code. Using -webkit-transform, we are able to rotate the loader itself using keyframes to give the illuison that the blue part is rotating.</p>
+      <div id="line"></div>
+      <p>Here is the final result! Your brand new loading wheel!</p>
+      <div class="completeLoader"></div>
+      <p>Have a good day!</p>
+      <div id="line"></div>
+    </div>
+  </body>
+</html>
